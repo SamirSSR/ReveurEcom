@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cart | REVEUR</title>
+  <title>Checkout | REVEUR</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,7 +20,7 @@
 </head>
 <body class="bg-white text-dark">
 
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="bg-primary text-white p-4 flex justify-between items-center shadow">
     <h1 class="text-2xl font-bold">REVEUR</h1>
     <ul class="flex gap-6">
@@ -36,19 +36,17 @@
     </ul>
   </nav>
 
-  <!-- MAIN CART CONTENT -->
-  <main class="p-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-primary mb-4">Your Cart</h2>
-    <div id="cart-items" class="space-y-4">
-      <!-- Items will be injected -->
-    </div>
+  <!-- Main -->
+  <main class="p-6 max-w-2xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-primary mb-4">Checkout</h2>
 
-    <div class="mt-6 text-right">
-      <p class="text-2xl font-bold mb-2">Total: ₹<span id="cart-total">0</span></p>
-      <button id="checkout-btn" class="bg-primary text-white px-6 py-2 rounded hover:bg-orange-600">Proceed to Checkout</button>
-    </div>
+    <p class="text-lg text-gray-700 mb-6">This is a demo site. Checkout is not functional.</p>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Checkout Icon" class="w-32 mx-auto mb-4 opacity-70" />
+
+    <a href="index.html" class="inline-block mt-6 bg-primary text-white px-6 py-2 rounded hover:bg-orange-600 transition">Return to Home</a>
   </main>
+
   <script src="js/cart-utils.js" defer></script>
-  <script src="js/cart.js"></script>
 </body>
 </html>

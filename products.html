@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | REVEUR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#f97316', // Orange
+            dark: '#111827'     // Almost black
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-white text-dark">
+
+  <!-- NAVBAR -->
+  <nav class="bg-primary text-white p-4 flex justify-between items-center shadow">
+    <h1 class="text-2xl font-bold">REVEUR</h1>
+    <ul class="flex gap-6">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="products.html" class="hover:underline font-semibold underline">Products</a></li>
+      <li><a href="cart.html" class="hover:underline relative">
+        Cart 🛒
+        <span id="cart-count" class="absolute -top-2 -right-3 bg-white text-primary font-bold text-xs rounded-full px-2">0</span>
+      </a></li>
+      <li><a href="account.html" class="hover:underline">Account 👤</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="p-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-primary">Our Ayurvedic Products</h2>
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Injected by JS -->
+    </div>
+  </main>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart-utils.js" defer></script>
+</body>
+</html>

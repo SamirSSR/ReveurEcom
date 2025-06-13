@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REVEUR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#f97316',  // Orange
+            dark: '#111827'      // Black/Gray-900
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-dark">
+
+  <!-- NAVBAR -->
+  <nav class="bg-primary text-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">REVEUR</h1>
+    <ul class="flex gap-6 font-medium">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="products.html" class="hover:underline">Products</a></li>
+      <li class="relative">
+        <a href="cart.html" class="hover:underline">
+          Cart 🛒
+          <span id="cart-count" class="absolute -top-2 -right-3 bg-white text-primary text-sm px-1.5 rounded-full font-bold shadow">0</span>
+        </a>
+      </li>
+      <li><a href="account.html" class="hover:underline">Account 👤</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="bg-orange-100 text-center py-20">
+    <h2 class="text-4xl font-bold mb-4 text-dark">Live Natural, Stay Healthy</h2>
+    <p class="text-lg mb-6 text-gray-800">Premium Ayurvedic products sourced from the heart of India.</p>
+    <a href="products.html" class="bg-primary text-white px-6 py-2 rounded hover:bg-orange-600">
+      Explore Products
+    </a>
+  </section>
+
+  <!-- PRODUCT LISTING SECTION -->
+  <section class="px-6 py-10">
+    <h3 class="text-2xl font-semibold mb-6">Featured Products</h3>
+    <div id="featured-products" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <!-- JS will insert product cards here -->
+    </div>
+  </section>
+  <script src="js/homepage-products.js"></script>
+  <script src="js/cart-utils.js" defer></script>
+</body>
+</html>

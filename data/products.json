@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Ashwagandha Capsules",
+    "price": 299,
+    "image": "images/ashwagandha.jpg",
+    "featured": true,
+    "description": "Boosts stamina, reduces stress and promotes overall vitality. 100% natural and clinically tested."
+  },
+  {
+    "id": 2,
+    "name": "Triphala Juice",
+    "price": 199,
+    "image": "images/triphala.jpg",
+    "featured": true,
+    "description": "A powerful digestive tonic that detoxifies the body and strengthens immunity. Made from fresh amla, haritaki, and bibhitaki."
+  },
+  {
+    "id": 3,
+    "name": "Neem & Tulsi Face Wash",
+    "price": 150,
+    "image": "images/neem-tulsi-facewash.jpg",
+    "featured": true,
+    "description": "Natural cleansing face wash that fights acne, controls oil, and refreshes the skin with neem and tulsi extracts."
+  },
+  {
+    "id": 4,
+    "name": "Chyawanprash",
+    "price": 349,
+    "image": "images/chyawanprash.jpg",
+    "featured": false,
+    "description": "Traditional Ayurvedic immunity booster made with over 40 herbs. Helps improve energy, digestion, and respiratory health."
+  },
+  {
+    "id": 5,
+    "name": "Aloe Vera Gel",
+    "price": 120,
+    "image": "images/aloe-vera.jpg",
+    "featured": false,
+    "description": "Multipurpose gel for skin hydration and hair nourishment. Pure, cooling, and free from parabens or artificial colors."
+  },
+  {
+    "id": 6,
+    "name": "Brahmi Oil",
+    "price": 220,
+    "image": "images/brahmi-oil.jpg",
+    "featured": false,
+    "description": "Massage oil that strengthens hair roots, promotes relaxation, and enhances memory. Infused with Brahmi and sesame oil."
+  }
+]
