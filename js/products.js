@@ -5,13 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetch("data/products.json")
     .then(res => res.json())
-    .then(products => {
-      // Homepage shows first 3, full list on products page
-      const isHomepage = window.location.pathname.includes("index.html") || window.location.pathname === "/";
-
-      const productsToShow = isHomepage ? products.slice(0, 3) : products;
-
-      productsToShow.forEach(product => {
+    .then(products => {  
+      products.forEach(product => {
         const card = document.createElement("div");
         card.className = "border rounded p-4 shadow hover:shadow-lg transition";
 
@@ -25,8 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
 
-        card.querySelector(".add-to-cart").addEventListener("click", () => {
-          addToCart(product);
+        const addToCartBtn = card.querySelector(".add-to-cart");
+        addToCartBtn.addEventListener("click", () => {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cart.push(product);
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          // Live update cart badge
+          if (typeof updateCartCount === "function") updateCartCount();
         });
 
         grid.appendChild(card);
@@ -34,23 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
       updateCartCount();
     });
-
-  function addToCart(product) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (!cart.find(p => p.id === product.id)) {
-      cart.push(product);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      alert(`${product.name} added to cart!`);
-      updateCartCount();
-    } else {
-      alert(`${product.name} is already in cart!`);
-    }
-  }
-
-  function updateCartCount() {
-    const count = JSON.parse(localStorage.getItem("cart"))?.length || 0;
-    const badge = document.getElementById("cart-count");
-    if (badge) badge.textContent = count;
-  }
 });
 
