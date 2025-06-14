@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account – REVEUR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50 text-gray-800">
+  <!-- Navbar -->
+  <div id="navbar">
+    <nav class="bg-orange-500 text-white shadow p-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold tracking-wider hover:opacity-90">REVEUR</a>
+        </div>
+    </nav>
+  </div>
+
+  <main class="max-w-md mx-auto p-6 bg-white mt-12 rounded-lg shadow">
+    <h2 class="text-2xl font-bold mb-4 text-primary">Your Account</h2>
+    <p class="text-sm text-gray-600 mb-6">This is a demo account section. No real login functionality implemented.</p>
+
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" value="user@reveur.com" class="w-full border p-2 rounded" disabled />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" value="Demo User" class="w-full border p-2 rounded" disabled />
+      </div>
+    </div>
+
+    <button onclick="alert('Fake logout')" class="mt-6 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+      Logout
+    </button>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
