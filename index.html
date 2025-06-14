@@ -18,6 +18,22 @@
       }
     }
   </script>
+  <style>
+  @keyframes dropdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-dropdown {
+    animation: dropdown 0.3s ease-out;
+  }
+</style>
 </head>
 <body class="bg-white text-dark">
 
@@ -25,10 +41,8 @@
   <!-- Desktop -->
   <nav class="bg-primary text-white shadow p-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">REVEUR</h1>
-     <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
-      ☰
-      </button>
-    <ul class="flex gap-6 font-medium">
+     
+    <ul class="flex gap-6 font-medium hidden md:flex">
       <li><a href="index.html" class="hover:underline">Home</a></li>
       <li><a href="products.html" class="hover:underline">Products</a></li>
       <li class="relative">
@@ -40,12 +54,18 @@
       <li><a href="account.html" class="hover:underline">Account 👤</a></li>
     </ul>
     <!-- mobile -->
-    <ul id="mobile-menu" class="md:hidden hidden mt-3 space-y-3 text-center font-medium">
-    <li><a href="index.html" class="block hover:underline">Home</a></li>
-    <li><a href="products.html" class="block hover:underline">Products</a></li>
-    <li><a href="cart.html" class="block hover:underline">Cart 🛒</a></li>
-    <li><a href="account.html" class="block hover:underline">Account 👤</a></li>
-    </ul>
+    <div class="relative md:hidden">
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+      ☰
+      </button>
+      <!-- Dropdown menu -->
+      <ul id="mobile-menu" class="absolute right-0 top-full hidden flex flex-col gap-2 w-48 bg-white text-primary rounded shadow-lg mt-2 z-50 animate-dropdown">
+        <li><a href="index.html" class="block px-4 py-2 hover:bg-orange-100">Home</a></li>
+        <li><a href="products.html" class="block px-4 py-2 hover:bg-orange-100">Products</a></li>
+        <li><a href="cart.html" class="block px-4 py-2 hover:bg-orange-100">Cart 🛒</a></li>
+        <li><a href="account.html" class="block px-4 py-2 hover:bg-orange-100">Account 👤</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- HERO SECTION -->
