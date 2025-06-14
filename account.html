@@ -5,17 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Account – REVEUR</title>
   <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+  @keyframes dropdown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-dropdown {
+    animation: dropdown 0.3s ease-out;
+  }
+</style>
 </head>
 <body class="bg-orange-50 text-gray-800">
   <!-- Navbar -->
   <div id="navbar">
     <nav class="bg-orange-500 text-white shadow p-4 flex justify-between items-center">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-bold tracking-wider hover:opacity-90">REVEUR</a>
-        </div>
-    </nav>
+    <h1 class="text-2xl font-bold">REVEUR</h1>
+     
+    <ul class="flex gap-6 font-medium hidden md:flex">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="products.html" class="hover:underline">Products</a></li>
+      <li class="relative">
+        <a href="cart.html" class="hover:underline">
+          Cart 🛒
+          <span id="cart-count" class="absolute -top-2 -right-3 bg-white text-primary text-sm px-1.5 rounded-full font-bold shadow">0</span>
+        </a>
+      </li>
+      <li><a href="account.html" class="hover:underline">Account 👤</a></li>
+    </ul>
+    <!-- mobile -->
+    <div class="relative md:hidden">
+      <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+      ☰
+      </button>
+      <!-- Dropdown menu -->
+      <ul id="mobile-menu" class="absolute right-0 top-full hidden flex flex-col gap-2 w-48 bg-white text-orange-500 rounded shadow-lg mt-2 z-50 animate-dropdown">
+        <li><a href="index.html" class="block px-4 py-2 hover:bg-orange-100">Home</a></li>
+        <li><a href="products.html" class="block px-4 py-2 hover:bg-orange-100">Products</a></li>
+        <li><a href="cart.html" class="block px-4 py-2 hover:bg-orange-100">Cart 🛒</a></li>
+        <li><a href="account.html" class="block px-4 py-2 hover:bg-orange-100">Account 👤</a></li>
+      </ul>
+    </div>
+  </nav>
   </div>
-
   <main class="max-w-md mx-auto p-6 bg-white mt-12 rounded-lg shadow">
     <h2 class="text-2xl font-bold mb-4 text-primary">Your Account</h2>
     <p class="text-sm text-gray-600 mb-6">This is a demo account section. No real login functionality implemented.</p>
