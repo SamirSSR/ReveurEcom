@@ -22,6 +22,7 @@
 <body class="bg-white text-dark">
 
   <!-- NAVBAR -->
+  <!-- Desktop -->
   <nav class="bg-primary text-white shadow p-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">REVEUR</h1>
     <ul class="flex gap-6 font-medium">
@@ -34,6 +35,13 @@
         </a>
       </li>
       <li><a href="account.html" class="hover:underline">Account 👤</a></li>
+    </ul>
+    <!-- mobile -->
+    <ul id="mobile-menu" class="md:hidden hidden mt-3 space-y-3 text-center font-medium">
+    <li><a href="index.html" class="block hover:underline">Home</a></li>
+    <li><a href="products.html" class="block hover:underline">Products</a></li>
+    <li><a href="cart.html" class="block hover:underline">Cart 🛒</a></li>
+    <li><a href="account.html" class="block hover:underline">Account 👤</a></li>
     </ul>
   </nav>
 
@@ -53,6 +61,7 @@
       <!-- JS will insert product cards here -->
     </div>
   </section>
+  <script src="js/main.js"></script>
   <script src="js/homepage-products.js"></script>
   <script src="js/cart-utils.js" defer></script>
 </body>
